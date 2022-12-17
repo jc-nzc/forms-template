@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Step 3:</h1>
+        <p>Create a basic web form</p>
+        <form id="myForm" onSubmit="alert('Thank you for subscribing!');" action="submit.php" method="post">
+          <label for="name">Name</label><br />
+          <input type="text" id="name" name="name" placeholder="Ex. Logan Garcia" required />
+          <br>
+          <label for="email">Email</label><br />
+          <input type="text" id="email" name="email" pattern=".+@.+\.com" placeholder="Ex. user@domain.com" required />
+          <br>
+          <br>
+          <label for="hand">Which is your dominant hand?</label><br />
+          <input type="radio" name="radioInput" value="left-hand" />Left Hand<br />
+          <input type="radio" name="radioInput" value="right-hand" />Right Hand<br />
+          <input type="radio" name="radioInput" value="ambidextrous" />Ambidextrous<br /><br />
+      
+          <label>Sign up for our newsletter</label><br />
+          <input type="checkbox" name="checkboxInput[]" value="check1" required />Yes, I consent to receive emails.<br />
+          <br>
+          <label>File Input:</label><br />
+          <input type="file" name="fileInput" /><br /><br />
+      
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
