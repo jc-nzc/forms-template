@@ -14,6 +14,10 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Form Submitted");
 
+  // Get Inner HTML
+  let form_text = document.getElementById("name").value;
+  console.log(form_text);
+
   // Example form post, not fully built, just testing in the console
   fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
