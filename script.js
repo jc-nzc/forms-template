@@ -14,17 +14,30 @@ form.addEventListener("submit", function (e) {
   e.preventDefault();
   console.log("Form Submitted");
 
-  // Get Inner HTML
-  let form_text = document.getElementById("name").value;
-  console.log(form_text);
+  // Grab Inner HTML for name
+  let form_name = document.getElementById("name").value;
+  console.log(form_name);
+
+  // Grab email input
+  let form_email = document.getElementById("email").value;
+  console.log(form_email);
+  
+  // Grab hand selection... needs an id
+  let form_hand = document.getElementById("radio").value;
+  console.log(form_hand);
+
+  // Grab file... need to read documentation on files, currently uploads path and file name
+  // C:\fakepath\ {{some file}}
+  let form_file = document.getElementById("file").value;
+  console.log(form_file);
 
   // Example form post, not fully built, just testing in the console
   fetch("https://jsonplaceholder.typicode.com/posts", {
     method: "POST",
     body: JSON.stringify({
-      name: "Logan Garcia",
-      email: "user@domain.com",
-      hand_preference: "Ambidexstrous",
+      name: form_name,
+      email: form_email,
+      hand_preference: form_hand,
       file: "image.png",
       userId: 3
     }),
